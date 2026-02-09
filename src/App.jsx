@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine, ResponsiveContainer, Legend } from 'recharts';
 import { TrendingUp, TrendingDown, AlertCircle, CheckCircle, ArrowRight, Brain, Activity, Edit3, PlayCircle, RefreshCw, Zap, Shield, Trophy, Target } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 // --- Styles & Animation Helpers ---
 const ANIMATIONS = `
@@ -566,6 +567,7 @@ export default function App() {
         {stage === 'graph-builder' && renderGraphBuilder()}
         {stage === 'analysis' && renderAnalysis()}
       </main>
+      <Analytics />
     </div>
   );
 }
